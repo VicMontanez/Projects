@@ -9,6 +9,7 @@ class App extends Component {
       My Hello World
       <FirstComponent></FirstComponent>
       <SecondComponent></SecondComponent>
+      <ThirdComponent></ThirdComponent>
     </div>
   );
 }
@@ -36,4 +37,16 @@ class SecondComponent extends Component {
   );
 }
 }
+
+//Class Component
+class ThirdComponent extends Component {
+  render () {
+  return (
+    <div className="thirdComponent">
+      ThirdComponent
+    </div>
+  );
+}
+}
+
 export default App;
