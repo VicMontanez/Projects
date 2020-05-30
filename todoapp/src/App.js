@@ -8,16 +8,30 @@ class App extends Component {
     <div className="App">
       My Hello World
       <FirstComponent></FirstComponent>
+      <SecondComponent></SecondComponent>
     </div>
   );
 }
 }
 
+
+//Class Component
 class FirstComponent extends Component {
   render () {
   return (
     <div className="firstComponent">
       FirstComponent
+    </div>
+  );
+}
+}
+
+//Class Component
+class SecondComponent extends Component {
+  render () {
+  return (
+    <div className="secondComponent">
+      SecondComponent
     </div>
   );
 }
