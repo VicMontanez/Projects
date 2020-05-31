@@ -13,6 +13,9 @@ class TodoApp extends Component {
 //Login Component
 
 class LoginComponent extends Component {
+    constructor() {
+        super()
+    }
     render() {
         return (
             <div>
