@@ -17,7 +17,8 @@ class LoginComponent extends Component {
         return (
             <div>
             User Name: <input type="text" nane="username"/>
-            </div>
+            Password: <input type="password" name="password"/>
+           </div>
         )
     }
 }
