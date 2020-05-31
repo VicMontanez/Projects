@@ -13,13 +13,18 @@ class TodoApp extends Component {
 //Login Component
 
 class LoginComponent extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            username: 'username',
+            password: ''
+        }
     }
     render() {
         return (
             <div>
-            User Name: <input type="text" nane="username"/>
+            User Name: <input type="text" nane="username" value={this.state.username}/>
             Password: <input type="password" name="password"/>
             <button>Login</button>
            </div>
