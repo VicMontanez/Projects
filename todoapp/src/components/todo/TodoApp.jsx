@@ -10,4 +10,16 @@ class TodoApp extends Component {
     }
 }
 
+//Login Component
+
+class LoginComponent extends Component {
+    render() {
+        return (
+            <div>
+            User Name: <input type="text" nane="username"/>
+            </div>
+        )
+    }
+}
+
 export default TodoApp
