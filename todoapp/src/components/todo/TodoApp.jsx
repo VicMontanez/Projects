@@ -18,7 +18,9 @@ class LoginComponent extends Component {
 
         this.state = {
             username: 'username',
-            password: ''
+            password: '',
+            hasLoginFailed: false,
+            showSuccessMessage: false
         }
         //this.handleUsernameChange = this.handleUsernameChange.bind(this)
         //this.handlePasswordChange = this.handlePasswordChange.bind(this)
@@ -27,7 +29,7 @@ class LoginComponent extends Component {
     }
 
     handleChange(event) {
-        console.log(event.target.value);
+       // console.log(event.target.value);
         this.setState(
             {
                 [event.target.name]: event.target.value
@@ -39,7 +41,16 @@ class LoginComponent extends Component {
     // }
 
     loginClicked() {
-        console.log(this.state)
+        if(this.state.username =="username" && this.state.password=='password1234'){
+            this.setState({showSuccessMessage:true})
+            this.setState({hasLoginFailed:false})
+        }
+        else {
+            this.setState({showSuccessMessage:false})
+            this.setState({hasLoginFailed:true})
+        }
+        
+        //console.log(this.state)
     }
 
     render() {
