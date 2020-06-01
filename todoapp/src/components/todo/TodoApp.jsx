@@ -6,11 +6,12 @@ class TodoApp extends Component {
         return (
             <div className="TodoApp">
                 <Router>
-                    <>
+                    <Switch>
                     <Route path="/" exact component={LoginComponent} />
                     <Route path="/login" component={LoginComponent} />
                     <Route path="/welcome" component={WelcomeComponent} />
-                    </>
+                    <Route component={ErrorComponent}/>
+                    </Switch>
                 </Router>
                 
                 
@@ -24,6 +25,10 @@ class WelcomeComponent extends Component {
     render() {
         return <div>Welcome!</div>
     }
+}
+
+function ErrorComponent() {
+    return <div>An Error Pccured. I don't know what to do! Contact support at (555)555-5555</div>
 }
 
 //Login Component
