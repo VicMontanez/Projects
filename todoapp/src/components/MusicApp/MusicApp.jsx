@@ -21,9 +21,19 @@ class MusicApp extends Component {
              })
      }
 
+    // buttonClick() {
+    //     getDataFromItunes()
+    // }
+
     buttonClick() {
-        getDataFromItunes()
-    }
+      let url = `https://itunes.apple.com/search?term=${this.state.search}`
+  
+      fetch(url)
+      .then(data => data.json() )
+      .then( json => {
+          console.log(json)
+      })
+  }
     
     render () {
     return (
@@ -36,14 +46,6 @@ class MusicApp extends Component {
   }
   }
 
-  function getDataFromItunes() {
-    let url = 'https://itunes.apple.com/search?term='+ "jayz"
-
-    fetch(url)
-    .then(data => data.json() )
-    .then( json => {
-        console.log(json)
-    })
-}
+ // function 
 
   export default MusicApp
