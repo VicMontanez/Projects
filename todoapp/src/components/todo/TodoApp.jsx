@@ -9,7 +9,7 @@ class TodoApp extends Component {
                     <Switch>
                     <Route path="/" exact component={LoginComponent} />
                     <Route path="/login" component={LoginComponent} />
-                    <Route path="/welcome:name" component={WelcomeComponent} />
+                    <Route path="/welcome/:name" component={WelcomeComponent} />
                     <Route component={ErrorComponent}/>
                     </Switch>
                 </Router>
@@ -23,12 +23,12 @@ class TodoApp extends Component {
 
 class WelcomeComponent extends Component {
     render() {
-        return <div>Welcome{this.props.match.params.name}!</div>
+        return <div>Welcome {this.props.match.params.name}!</div>
     }
 }
 
 function ErrorComponent() {
-    return <div>An Error Pccured. I don't know what to do! Contact support at (555)555-5555</div>
+    return <div>An Error Occured. I don't know what to do! Contact support at (555)555-5555</div>
 }
 
 //Login Component
