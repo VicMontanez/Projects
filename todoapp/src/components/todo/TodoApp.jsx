@@ -9,7 +9,7 @@ class TodoApp extends Component {
                     <Switch>
                     <Route path="/" exact component={LoginComponent} />
                     <Route path="/login" component={LoginComponent} />
-                    <Route path="/welcome" component={WelcomeComponent} />
+                    <Route path="/welcome:name" component={WelcomeComponent} />
                     <Route component={ErrorComponent}/>
                     </Switch>
                 </Router>
@@ -63,7 +63,7 @@ class LoginComponent extends Component {
 
     loginClicked() {
         if(this.state.username === "username" && this.state.password=== "password1234"){
-            this.props.history.push("/welcome");
+            this.props.history.push(`/welcome/${this.state.username}`);
             //this.setState({showSuccessMessage:true})
             //this.setState({hasLoginFailed:false})
         }
