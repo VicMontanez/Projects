@@ -23,7 +23,7 @@ class TodoApp extends Component {
 
 class WelcomeComponent extends Component {
     render() {
-        return <div>Welcome!</div>
+        return <div>Welcome{this.props.match.params.name}!</div>
     }
 }
 
