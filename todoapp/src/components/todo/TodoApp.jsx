@@ -45,10 +45,14 @@ class ListTodosComponent extends Component {
                     </tr>
                 </thead>
                 <tbody>
+                    {this.state.todos.map (
+                        todo =>
                     <tr>
-                    <td>{this.state.todo.id}</td>
-                    <td>{this.state.todo.description}</td>
+                    <td>{todo.id}</td>
+                    <td>{todo.description}</td>
                     </tr>
+                    )
+                    }
                 </tbody>
             </table>
         </div>
