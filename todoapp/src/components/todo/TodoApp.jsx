@@ -10,7 +10,7 @@ class TodoApp extends Component {
                     <Route path="/" exact component={LoginComponent} />
                     <Route path="/login" component={LoginComponent} />
                     <Route path="/welcome/:name" component={WelcomeComponent} />
-                    <Route path="/welcome/todos" component={ListTodosComponent} />
+                    <Route path="/todos" component={ListTodosComponent} />
                     <Route component={ErrorComponent}/>
                     </Switch>
                 </Router>
@@ -26,7 +26,7 @@ class ListTodosComponent extends Component {
     constructor(props){
         super(props)
         this.state = {
-            todo: 
+            todos: 
             [
                 {id: 1, description: 'Learn React'},
                 {id: 2, description: 'Become an Expert at React'},
