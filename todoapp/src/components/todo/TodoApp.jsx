@@ -26,7 +26,12 @@ class ListTodosComponent extends Component {
     constructor(props){
         super(props)
         this.state = {
-            todo: {id: 1, description: 'Learn React'}
+            todo: 
+            [
+                {id: 1, description: 'Learn React'},
+                {id: 2, description: 'Become an Expert at React'},
+                {id: 3, description: 'Travel'}
+            ]
         }
     }
     render() {
