@@ -21,6 +21,12 @@ class TodoApp extends Component {
     }
 }
 
+class ListTodosComponent extends Component {
+    render() {
+        return <div>List Todos</div>
+    }
+}
+
 class WelcomeComponent extends Component {
     render() {
         return <div>Welcome {this.props.match.params.name}!</div>
