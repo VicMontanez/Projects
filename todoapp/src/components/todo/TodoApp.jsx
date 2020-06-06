@@ -28,7 +28,7 @@ class ListTodosComponent extends Component {
         this.state = {
             todos: 
             [
-                {id: 1, description: 'Learn React'},
+                {id: 1, description: 'Learn React', done:false, targetDate: new Date()},
                 {id: 2, description: 'Become an Expert at React'},
                 {id: 3, description: 'Travel'}
             ]
