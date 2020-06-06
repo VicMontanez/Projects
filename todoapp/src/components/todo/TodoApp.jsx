@@ -30,7 +30,7 @@ class ListTodosComponent extends Component {
             [
                 {id: 1, description: 'Learn React', done:false, targetDate: new Date()},
                 {id: 2, description: 'Become an Expert at React', done:false, targetDate: new Date()},
-                {id: 3, description: 'Travel'}
+                {id: 3, description: 'Travel', done:false, targetDate: new Date()}
             ]
         }
     }
