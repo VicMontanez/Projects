@@ -6,6 +6,7 @@ class TodoApp extends Component {
         return (
             <div className="TodoApp">
                 <Router>
+                    <HeaderComponent/>
                     <Switch>
                     <Route path="/" exact component={LoginComponent} />
                     <Route path="/login" component={LoginComponent} />
@@ -13,6 +14,7 @@ class TodoApp extends Component {
                     <Route path="/todos" component={ListTodosComponent} />
                     <Route component={ErrorComponent}/>
                     </Switch>
+                    <FooterComponent/>
                 </Router>
                 
                 
