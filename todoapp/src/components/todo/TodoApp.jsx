@@ -30,6 +30,16 @@ class HeaderComponent extends Component {
     }
 }
 
+class FooterComponent extends Component {
+    render() {
+        return (
+            <div>
+                <hr/>Footer 
+            </div>
+        )
+    }
+}
+
 class ListTodosComponent extends Component {
     constructor(props){
         super(props)
