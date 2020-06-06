@@ -27,7 +27,19 @@ class TodoApp extends Component {
 class HeaderComponent extends Component {
     render() {
         return (
-            <div>Header <hr/></div>
+            <header>
+                <nav className="navbar navbar-expand-md">
+                    <div><a>in28min</a></div>
+                    <ul className="navbar-nav">
+                        <li className="nav-link">Home</li>
+                        <li className="nav-link">Todos</li>
+                    </ul>
+                    <ul className="navbar-nav">
+                        <li className="nav-link">Login</li>
+                        <li className="nav-link">Logout</li>
+                    </ul>
+                </nav>
+            </header>
         )
     }
 }
