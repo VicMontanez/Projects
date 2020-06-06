@@ -42,6 +42,8 @@ class ListTodosComponent extends Component {
                     <tr>
                         <th>id</th>
                         <th>description</th>
+                        <th>Target Date</th>
+                        <th>Is Completed?</th>
                     </tr>
                 </thead>
                 <tbody>
