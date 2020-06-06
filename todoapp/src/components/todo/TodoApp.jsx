@@ -50,6 +50,8 @@ class ListTodosComponent extends Component {
                     <tr>
                     <td>{todo.id}</td>
                     <td>{todo.description}</td>
+                    <td>{todo.done.toString()}</td>
+                    <td>{todo.targetDate.toString()}</td>
                     </tr>
                     )
                     }
