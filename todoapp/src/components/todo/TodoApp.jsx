@@ -22,6 +22,14 @@ class TodoApp extends Component {
     }
 }
 
+class HeaderComponent extends Component {
+    render() {
+        return (
+            <div>Header <hr/></div>
+        )
+    }
+}
+
 class ListTodosComponent extends Component {
     constructor(props){
         super(props)
