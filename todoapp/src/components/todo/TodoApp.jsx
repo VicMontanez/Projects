@@ -83,7 +83,8 @@ class ListTodosComponent extends Component {
     render() {
         return <div>
             <h1>List Todos</h1>
-            <table>
+            <div className="container">
+            <table className="table">
                 <thead>
                     <tr>
                         <th>id</th>
@@ -105,6 +106,7 @@ class ListTodosComponent extends Component {
                     }
                 </tbody>
             </table>
+            </div>
         </div>
     }
 }
