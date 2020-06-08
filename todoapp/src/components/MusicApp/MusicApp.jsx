@@ -11,8 +11,10 @@ class HomeComponent extends Component {
                   <Route path="/" exact component={LoginComponent} />
                   <Route path="/login" component={LoginComponent} />
                   <Route path="/welcome/:name" component={MusicApp} />
+                  <Route path="/logout" component={LogoutComponent} />
                   <Route component={ErrorComponent}/>
                   </Switch>
+                  <FooterComponent/>
               </Router>
               
               
@@ -37,6 +39,17 @@ class HeaderComponent extends Component {
                     </ul>
                 </nav>
             </header>
+        )
+    }
+}
+
+
+class FooterComponent extends Component {
+    render() {
+        return (
+            <footer className="footer">
+                <span className="text-muted">All Rights Reserved @VicMontanez</span>
+            </footer>
         )
     }
 }
@@ -167,6 +180,19 @@ class MusicApp extends Component {
         )
     }
 
+}
+
+class LogoutComponent extends Component {
+    render() {
+        return (
+            <>
+                <h1>You are logged out.</h1>
+                <div className="container">
+                    Thank you for using our application!
+                </div>
+            </>
+        )
+    }
 }
 
  // function 
