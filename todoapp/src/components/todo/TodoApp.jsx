@@ -31,7 +31,7 @@ class HeaderComponent extends Component {
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <div><a href="google.com" className="navbar-brand">Todo App</a></div>
                     <ul className="navbar-nav">
-                        <li><Link className="nav-link" to="/welcome">Home</Link></li>
+                        <li><Link className="nav-link" to="/welcome/username">Home</Link></li>
                         <li><Link className="nav-link" to="/todos">Todos</Link></li>
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
