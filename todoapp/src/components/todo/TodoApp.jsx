@@ -32,7 +32,7 @@ class HeaderComponent extends Component {
                     <div><a href="google.com" className="navbar-brand">Todo App</a></div>
                     <ul className="navbar-nav">
                         <li className="nav-link"><Link to="/welcome">Home</Link></li>
-                        <li className="nav-link">Todos</li>
+                        <li className="nav-link"><Link to="/todos">Todos</Link></li>
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
                         <li className="nav-link">Login</li>
