@@ -28,8 +28,8 @@ class HeaderComponent extends Component {
     render() {
         return (
             <header>
-                <nav className="navbar navbar-expand-md">
-                    <div><a>Todo App</a></div>
+                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                    <div><a href="google.com" className="navbar-brand">Todo App</a></div>
                     <ul className="navbar-nav">
                         <li className="nav-link">Home</li>
                         <li className="nav-link">Todos</li>
