@@ -111,9 +111,15 @@ class ListTodosComponent extends Component {
 
 class WelcomeComponent extends Component {
     render() {
-        return <div>
+        return (
+            <>
+            <h1>Welcome!</h1>
+            <div>
             Welcome {this.props.match.params.name}! You can manage your todos <Link to="/todos">here</Link>
             </div>
+            </>
+        )
+        
     }
 }
 
@@ -168,13 +174,16 @@ class LoginComponent extends Component {
     render() {
         return (
             <div>
-                {/* <ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/> */}
-                {this.state.hasLoginFailed && <div>Invalid Credentials</div>}
-                {this.state.showSuccessMessage && <div>Login Successful!</div>}
-                {/* <ShowLoginSuccessMessage showSuccessMessage={this.state.showSuccessMessage}/> */}
-            User Name: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-            Password: <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
-            <button onClick={this.loginClicked}>Login</button>
+                <h1>Login</h1>
+                <div className="container">
+                    {/* <ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/> */}
+                    {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Credentials</div>}
+                    {this.state.showSuccessMessage && <div>Login Successful!</div>}
+                    {/* <ShowLoginSuccessMessage showSuccessMessage={this.state.showSuccessMessage}/> */}
+                    User Name: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                    Password: <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                    <button className="btn btn-success" onClick={this.loginClicked}>Login</button>
+                </div>
            </div>
         )
     }
