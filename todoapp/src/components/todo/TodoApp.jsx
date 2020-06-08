@@ -35,9 +35,8 @@ class HeaderComponent extends Component {
                         <li className="nav-link"><Link to="/todos">Todos</Link></li>
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
-                        <li className="nav-link">Login</li>
-                        <li className="nav-link">Logout</li>
-                    </ul>
+                        <li className="nav-link"><Link to="/login">Login</Link></li>
+                        <li className="nav-link"></li>
                 </nav>
             </header>
         )
