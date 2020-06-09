@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
-
+import Authentication from './AuthenticationService'
+import AuthenticationService from './AuthenticationService.js'
 class HomeComponent extends Component {
   render() {
       return (
-          <div className="MusicApp">
+          <div className="Home">
               <Router>
                   <HeaderComponent/>
                   <Switch>
@@ -28,9 +29,9 @@ class HeaderComponent extends Component {
         return (
             <header>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="google.com" className="navbar-brand">Music App</a></div>
+                    <div><a href="" className="navbar-brand">Music App</a></div>
                     <ul className="navbar-nav">
-                        <li><Link className="nav-link" to="/welcome/username">Home</Link></li>
+                        <li><Link className="nav-link" to="/">Home</Link></li>
                         <li><Link className="nav-link" to="/about">About us</Link></li>
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
@@ -99,13 +100,14 @@ class MusicApp extends Component {
     render () {
         
     return (
-      <div className="MusicApp">
+      <div className="results">
         <h1>iTunes API App</h1>
         <p>Enter artist here: <input type="text" name="search" value={this.state.search} onChange={this.handleChange}/></p>
         <button onClick={this.buttonClick}>Search</button>
        {
            this.state.output == '' ? <h1>Nothing found</h1> : 
            this.state.output.map((song, index) =>
+           <div class="row">
            <div class="col s4 m4 l4">
            <div class="card" style={{width: "8rem"}}>
              <img class="card-img-top" src={song.artworkUrl100} alt="Card image cap"/>
@@ -114,6 +116,7 @@ class MusicApp extends Component {
              <p class="card-text">{song.artistName}</p>
              <a href="#" class="btn btn-primary">More info</a>
              </div>
+         </div>
          </div>
          </div>
            )
@@ -154,6 +157,7 @@ class MusicApp extends Component {
 
     loginClicked() {
         if(this.state.username === "username" && this.state.password=== "password1234"){
+            AuthenticationService.registerSuccessfulLogin()
             this.props.history.push(`/welcome/${this.state.username}`);
             //this.setState({showSuccessMessage:true})
             //this.setState({hasLoginFailed:false})
