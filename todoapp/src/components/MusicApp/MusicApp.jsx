@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import Authentication from './AuthenticationService'
 import AuthenticationService from './AuthenticationService.js'
+import AuthenticatedRoute from './AuthenticatedRoute'
 class HomeComponent extends Component {
   render() {
       return (
@@ -11,7 +12,7 @@ class HomeComponent extends Component {
                   <Switch>
                   <Route path="/" exact component={LoginComponent} />
                   <Route path="/login" component={LoginComponent} />
-                  <Route path="/welcome/:name" component={MusicApp} />
+                  <AuthenticatedRoute path="/welcome/:name" component={MusicApp} />
                   <Route path="/logout" component={LogoutComponent} />
                   <Route component={ErrorComponent}/>
                   </Switch>
