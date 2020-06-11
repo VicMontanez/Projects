@@ -6,6 +6,7 @@ import AuthenticatedRoute from './AuthenticatedRoute.jsx'
 import LoginComponent from './LoginComponent.jsx'
 import FooterComponent from './FooterComponent.jsx'
 import LogoutComponent from './LogoutComponent'
+import ErrorComponent from './ErrorComponent'
 
 class HomeComponent extends Component {
   render() {
@@ -121,10 +122,5 @@ class MusicApp extends Component {
   }
   }
 
-
- // function 
- function ErrorComponent() {
-  return <div>An Error Occured. I don't know what to do! Contact support at (555)555-5555</div>
-}
 
   export default HomeComponent
