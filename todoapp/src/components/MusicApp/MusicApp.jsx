@@ -6,7 +6,9 @@ import AuthenticatedRoute from './AuthenticatedRoute.jsx'
 import LoginComponent from './LoginComponent.jsx'
 import FooterComponent from './FooterComponent.jsx'
 import LogoutComponent from './LogoutComponent'
+import HeaderComponent from './HeaderComponent'
 import ErrorComponent from './ErrorComponent'
+
 
 class HomeComponent extends Component {
   render() {
@@ -26,28 +28,6 @@ class HomeComponent extends Component {
           </div>
       )
   }
-}
-
-class HeaderComponent extends Component {
-    render() {
-        const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
-        //console.log(isUserLoggedIn)
-        return (
-            <header>
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="" className="navbar-brand">Music App</a></div>
-                    <ul className="navbar-nav">
-                        {isUserLoggedIn && <li><Link className="nav-link" to="/">Home</Link></li>}
-                        {isUserLoggedIn && <li><Link className="nav-link" to="/about">About us</Link></li>}
-                    </ul>
-                    <ul className="navbar-nav navbar-collapse justify-content-end">
-                        {!isUserLoggedIn && <li><Link className="nav-link" to="/login">Login</Link></li>}
-                        {isUserLoggedIn && <li><Link className="nav-link"to="/logout" onClick={AuthenticationService.logout}>Logout</Link></li>}
-                    </ul>
-                </nav>
-            </header>
-        )
-    }
 }
 
 
