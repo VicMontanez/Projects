@@ -5,6 +5,7 @@ import AuthenticationService from './AuthenticationService.js'
 import AuthenticatedRoute from './AuthenticatedRoute.jsx'
 import LoginComponent from './LoginComponent.jsx'
 import FooterComponent from './FooterComponent.jsx'
+import LogoutComponent from './LogoutComponent'
 
 class HomeComponent extends Component {
   render() {
@@ -20,9 +21,7 @@ class HomeComponent extends Component {
                   <Route component={ErrorComponent}/>
                   </Switch>
                   <FooterComponent/>
-              </Router>
-              
-              
+              </Router>  
           </div>
       )
   }
@@ -122,20 +121,6 @@ class MusicApp extends Component {
   }
   }
 
-
-
-class LogoutComponent extends Component {
-    render() {
-        return (
-            <>
-                <h1>You are logged out.</h1>
-                <div className="container">
-                    Thank you for using our application!
-                </div>
-            </>
-        )
-    }
-}
 
  // function 
  function ErrorComponent() {
