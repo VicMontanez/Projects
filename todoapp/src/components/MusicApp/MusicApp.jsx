@@ -4,6 +4,7 @@ import Authentication from './AuthenticationService'
 import AuthenticationService from './AuthenticationService.js'
 import AuthenticatedRoute from './AuthenticatedRoute.jsx'
 import LoginComponent from './LoginComponent.jsx'
+import FooterComponent from './FooterComponent.jsx'
 
 class HomeComponent extends Component {
   render() {
@@ -49,16 +50,6 @@ class HeaderComponent extends Component {
     }
 }
 
-
-class FooterComponent extends Component {
-    render() {
-        return (
-            <footer className="footer">
-                <span className="text-muted">All Rights Reserved @VicMontanez</span>
-            </footer>
-        )
-    }
-}
 
 //Class Component
 class MusicApp extends Component {
