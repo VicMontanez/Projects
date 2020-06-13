@@ -9,6 +9,7 @@ import LogoutComponent from './LogoutComponent'
 import HeaderComponent from './HeaderComponent'
 import SearchComponent from './SearchComponent'
 import ErrorComponent from './ErrorComponent'
+import WelcomeComponent from './WelcomeComponent'
 
 
 class HomeComponent extends Component {
@@ -20,6 +21,7 @@ class HomeComponent extends Component {
                   <Switch>
                   <Route path="/" exact component={LoginComponent} />
                   <Route path="/login" component={LoginComponent} />
+                  <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent} />
                   <AuthenticatedRoute path="/search" component={SearchComponent} />
                   <Route path="/logout" component={LogoutComponent} />
                   <Route component={ErrorComponent}/>
