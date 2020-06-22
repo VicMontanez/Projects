@@ -8,6 +8,7 @@ class WelcomeComponent extends Component {
      this.state = {
         welcomeMessage: ''
     }
+    this.handleSuccessfulResponse = this.handleSuccessfulResponse.bind(this)
     }
     render() {
         return (
@@ -32,6 +33,11 @@ class WelcomeComponent extends Component {
             HelloWorldService.executeHelloWorldService()
             .then(response => console.log(response))
             //.catch()
+        }
+
+        handleSuccessfulResponse(response) {
+          this.setState({welcomeMessage: response.data})
+            
         }
     }
 
