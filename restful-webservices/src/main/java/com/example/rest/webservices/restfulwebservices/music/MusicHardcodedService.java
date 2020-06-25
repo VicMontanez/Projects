@@ -26,4 +26,3 @@ public class MusicHardcodedService {
 	}
 }
 
-// vid 11 6:48
