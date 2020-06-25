@@ -10,6 +10,7 @@ import HeaderComponent from './HeaderComponent'
 import SearchComponent from './SearchComponent'
 import ErrorComponent from './ErrorComponent'
 import WelcomeComponent from './WelcomeComponent'
+import ListMusicComponent from './ListMusicComponent'
 
 
 class HomeComponent extends Component {
@@ -24,6 +25,7 @@ class HomeComponent extends Component {
                   <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent} />
                   <AuthenticatedRoute path="/search" component={SearchComponent} />
                   <Route path="/logout" component={LogoutComponent} />
+                  <Route path="/music" component={ListMusicComponent} />
                   <Route component={ErrorComponent}/>
                   </Switch>
                   <FooterComponent/>
