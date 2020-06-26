@@ -13,7 +13,7 @@ class ListMusicComponent extends Component {
 
     componentDidMount() {
     let username = AuthenticationService.getLoggedInUserName
-    MusicDataService.retrieveAllMusic()
+    MusicDataService.retrieveAllMusic(username)
     .then(
         response => {
             this.setState({music: response.data})
@@ -32,8 +32,8 @@ render(){
                             <tr>
                                 <th>ID</th>
                                 <th>Artist Name</th>
-                                <th>Song Name</th>
                                 <th>Date</th>
+                                <th>Song Name</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
