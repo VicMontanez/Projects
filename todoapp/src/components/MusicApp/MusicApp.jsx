@@ -25,7 +25,7 @@ class HomeComponent extends Component {
                   <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent} />
                   <AuthenticatedRoute path="/search" component={SearchComponent} />
                   <Route path="/logout" component={LogoutComponent} />
-                  <Route path="/music" component={ListMusicComponent} />
+                  <AuthenticatedRoute path="/music" component={ListMusicComponent} />
                   <Route component={ErrorComponent}/>
                   </Switch>
                   <FooterComponent/>
