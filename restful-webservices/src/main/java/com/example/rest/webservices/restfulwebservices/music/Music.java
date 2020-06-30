@@ -4,20 +4,33 @@ import java.util.Date;
 
 public class Music {
 	private long id;
-	private String suername;
+	private String username;
 	private String description;
 	private Date targetDate;
+	private boolean isDone;
+	
+	public Music(long id, String username, String description, Date targetDate, boolean isDone) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.description = description;
+		this.targetDate = targetDate;
+		this.isDone = isDone;
+	}
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
+		
+		
 	}
-	public String getSuername() {
-		return suername;
+	public String getUsername() {
+		return username;
 	}
-	public void setSuername(String suername) {
-		this.suername = suername;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getDescription() {
 		return description;
@@ -37,6 +50,6 @@ public class Music {
 	public void setDone(boolean isDone) {
 		this.isDone = isDone;
 	}
-	private boolean isDone;
+	
 
 }
