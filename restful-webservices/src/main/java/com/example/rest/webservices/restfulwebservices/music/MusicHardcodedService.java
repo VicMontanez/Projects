@@ -24,5 +24,25 @@ public class MusicHardcodedService {
 		return music;
 		
 	}
+	
+	public Music deletebyId(long id) {
+		Music artist = findById(id);
+		
+		if(artist==null) return null;
+		
+		if(music.remove(artist)) {
+		return artist;
+	}
+		return null;
+	}
+
+	private Music findById(long id) {
+		for(Music artist:music) {
+			if(artist.getId() == id) {
+				return artist;
+			}
+		}
+		return null;
+	}
 }
 
