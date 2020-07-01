@@ -35,6 +35,7 @@ render(){
                                 <th>Date</th>
                                 <th>Song Name</th>
                                 <th>Status</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,7 +48,7 @@ render(){
                                             <td>{music.targetDate}</td>
                                             <td>{music.isDone}</td>
                                     
-                                            <td><button className="btn btn-success">Update</button></td>
+                                            {/* <td><button className="btn btn-success">Update</button></td> */}
                                             <td><button className="btn btn-warning">Delete</button></td>
                                         </tr>
                                 )
