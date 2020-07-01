@@ -67,7 +67,7 @@ render(){
                                             <td>{music.targetDate}</td>
                                             <td>{music.isDone}</td>
                                     
-                                            {/* <td><button className="btn btn-success">Update</button></td> */}
+                                            <td><button className="btn btn-success" onClick={() => this.updateMusicClicked(music.id)}>Update</button></td>
                                             <td><button className="btn btn-warning" onClick={() => this.deleteMusicClicked(music.id)}>Delete</button></td>
                                         </tr>
                                 )
