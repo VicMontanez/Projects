@@ -9,6 +9,7 @@ class ListMusicComponent extends Component {
         this.state = {
             music: []
         }
+        this.deleteMusicClicked = this.deleteMusicClicked.bind(this)
     }
 
     componentDidMount() {
@@ -54,7 +55,7 @@ render(){
                                             <td>{music.isDone}</td>
                                     
                                             {/* <td><button className="btn btn-success">Update</button></td> */}
-                                            <td><button className="btn btn-warning">Delete</button></td>
+                                            <td><button className="btn btn-warning" onClick={() => this.deleteMusicClicked(todo.id)}>Delete</button></td>
                                         </tr>
                                 )
                             }
