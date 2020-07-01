@@ -5,6 +5,11 @@ class MusicDataService {
         return axios.get(`http://localhost:8080/users/${name}/music`);
          //console.log('executed service')
      }
+
+     deleteMusic(name, id) {
+        return axios.delete(`http://localhost:8080/users/${name}/music/${id}`);
+         //console.log('executed service')
+     }
 }
 
 export default new MusicDataService
