@@ -12,13 +12,18 @@ class ListMusicComponent extends Component {
     }
 
     componentDidMount() {
-    let username = AuthenticationService.getLoggedInUserName
+    let username = AuthenticationService.getLoggedInUserName()
     MusicDataService.retrieveAllMusic(username)
     .then(
         response => {
             this.setState({music: response.data})
         }
     )
+}
+
+deleteMusicClicked(id) {
+    let username = AuthenticationService.getLoggedInUserName()
+    console.log(id + " " + username); 
 }
 
 render(){
