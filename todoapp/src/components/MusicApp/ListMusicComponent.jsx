@@ -7,7 +7,8 @@ class ListMusicComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            music: []
+            music: [],
+            message: null
         }
         this.deleteMusicClicked = this.deleteMusicClicked.bind(this)
     }
@@ -24,7 +25,13 @@ class ListMusicComponent extends Component {
 
 deleteMusicClicked(id) {
     let username = AuthenticationService.getLoggedInUserName()
-    console.log(id + " " + username); 
+   // console.log(id + " " + username); 
+   MusicDataService.deleteMusic(username, id)
+   .then(
+       response => {
+           this.setState({message: `Delete of song ${id} Successful`})
+       }
+   )
 }
 
 render(){
