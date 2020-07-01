@@ -11,9 +11,14 @@ class ListMusicComponent extends Component {
             message: null
         }
         this.deleteMusicClicked = this.deleteMusicClicked.bind(this)
+        this.refreshMusic = this.refreshMusic.bind(this)
     }
 
     componentDidMount() {
+        this.refreshMusic();
+}
+
+refreshMusic() {
     let username = AuthenticationService.getLoggedInUserName()
     MusicDataService.retrieveAllMusic(username)
     .then(
@@ -30,7 +35,8 @@ deleteMusicClicked(id) {
    .then(
        response => {
            this.setState({message: `Delete of song ${id} Successful`})
-       }
+           this.refreshMusic()
+        }
    )
 }
 
