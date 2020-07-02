@@ -11,6 +11,7 @@ import SearchComponent from './SearchComponent'
 import ErrorComponent from './ErrorComponent'
 import WelcomeComponent from './WelcomeComponent'
 import ListMusicComponent from './ListMusicComponent'
+import MusicComponent from './MusicComponent'
 
 
 class HomeComponent extends Component {
@@ -25,6 +26,7 @@ class HomeComponent extends Component {
                   <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent} />
                   <AuthenticatedRoute path="/search" component={SearchComponent} />
                   <Route path="/logout" component={LogoutComponent} />
+                  <AuthenticatedRoute path="/music/:id" component={MusicComponent} />
                   <AuthenticatedRoute path="/music" component={ListMusicComponent} />
                   <Route component={ErrorComponent}/>
                   </Switch>
