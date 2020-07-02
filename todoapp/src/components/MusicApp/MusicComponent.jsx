@@ -1,6 +1,6 @@
 import React , {Component} from 'react'
 import moment from 'moment'
-import { Formik } from 'formik'
+import { Formik, Form, Field } from 'formik'
 
 class MusicComponent extends Component {
     constructor(props) {
@@ -14,20 +14,31 @@ class MusicComponent extends Component {
     }
     
     render() {
-        return <div>
+        return (
+        <div>
             <h1>Music</h1>
-            <div class="container">
+            <div className="container">
                 <Formik>
                     {
                         (props) => (
-                            <div>Something</div>
+                            <Form>
+                                <fieldset className="form-group">
+                                    <label>Description</label>
+                                    <Field className="form-control" type="text" name="description"/>
+                                </fieldset>
+                                <fieldset className="form-group" >
+                                    <label></label>
+                                    <Field className="form-control" type="date" name="targetDate"/>
+                                </fieldset>
+                            </Form>
                         )
                     }
                 </Formik>
             </div>
-            Music Component for id - {this.props.match.params.id}
+           Music Component for id - {this.props.match.params.id}
             
             </div>
+        )
     }
 }
 
