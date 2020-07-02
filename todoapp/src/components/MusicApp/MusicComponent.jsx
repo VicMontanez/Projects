@@ -30,6 +30,7 @@ class MusicComponent extends Component {
                                     <label></label>
                                     <Field className="form-control" type="date" name="targetDate"/>
                                 </fieldset>
+                                <button className="btn- btn-success" type="submit">Save</button>
                             </Form>
                         )
                     }
