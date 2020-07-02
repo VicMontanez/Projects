@@ -11,6 +11,7 @@ class ListMusicComponent extends Component {
             message: null
         }
         this.deleteMusicClicked = this.deleteMusicClicked.bind(this)
+        this.updateMusicClicked = this.updateMusicClicked.bind(this)
         this.refreshMusic = this.refreshMusic.bind(this)
     }
 
@@ -38,6 +39,20 @@ deleteMusicClicked(id) {
            this.refreshMusic()
         }
    )
+}
+
+updateMusicClicked(id) {
+    //console.log('update ' + id)
+    this.props.history.push(`/music/${id}`)
+//     let username = AuthenticationService.getLoggedInUserName()
+//    // console.log(id + " " + username); 
+//    MusicDataService.deleteMusic(username, id)
+//    .then(
+//        response => {
+//            this.setState({message: `Delete of song ${id} Successful`})
+//            this.refreshMusic()
+//         }
+//    )
 }
 
 render(){
