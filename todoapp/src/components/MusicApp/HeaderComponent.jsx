@@ -9,7 +9,7 @@ class HeaderComponent extends Component {
         //console.log(isUserLoggedIn)
         return (
             <header>
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-md navbar-dark bg-primary">
                     <div><a href="" className="navbar-brand">Music App</a></div>
                     <ul className="navbar-nav">
                         {isUserLoggedIn && <li><Link className="nav-link" to="/">Home</Link></li>}
