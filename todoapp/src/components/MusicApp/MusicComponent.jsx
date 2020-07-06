@@ -15,6 +15,13 @@ class MusicComponent extends Component {
         this.onSubmit = this.onSubmit.bind(this)
     }
 
+    validate(values) {
+        let errors = {}
+        console.log(values)
+        return errors
+
+    }
+
     onSubmit(values) {
         console.log(values)
     }
@@ -32,6 +39,7 @@ class MusicComponent extends Component {
                         targetDate: targetDate,
                     }}
                     onSubmit={this.onSubmit}
+                    validate={this.validate}
                 >
                     {
                         (props) => (
