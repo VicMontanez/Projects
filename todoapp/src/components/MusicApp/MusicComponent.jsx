@@ -20,7 +20,12 @@ class MusicComponent extends Component {
         <div>
             <h1>Music</h1>
             <div className="container">
-                <Formik>
+                <Formik
+                    initialValues={{ 
+                        description: description,
+                        targetDate: targetDate
+                    }}
+                >
                     {
                         (props) => (
                             <Form>
