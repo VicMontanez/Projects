@@ -11,6 +11,12 @@ class MusicComponent extends Component {
             description: 'Learn Forms',
             targetDate: moment(new Date()).format('YYYY-MM-DD')
         }
+
+        this.onSubmit = this.onSubmit.bind(this)
+    }
+
+    onSubmit(values) {
+        console.log(values)
     }
     
     render() {
@@ -23,8 +29,9 @@ class MusicComponent extends Component {
                 <Formik
                     initialValues={{ 
                         description: description,
-                        targetDate: targetDate
+                        targetDate: targetDate,
                     }}
+                    onSubmit={this.onSubmit}
                 >
                     {
                         (props) => (
