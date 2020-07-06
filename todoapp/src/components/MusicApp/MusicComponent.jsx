@@ -14,6 +14,8 @@ class MusicComponent extends Component {
     }
     
     render() {
+        let description = this.state.description
+        let targetDate = this.state.targetDate
         return (
         <div>
             <h1>Music</h1>
