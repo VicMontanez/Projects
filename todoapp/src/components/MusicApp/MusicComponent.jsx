@@ -17,8 +17,17 @@ class MusicComponent extends Component {
     }
 
     validate(values) {
-        let errors = {description:'Should have at least 5 characters'}
-        console.log(values)
+        let errors = {}
+        if(!values.description) {
+            errors.description = 'Enter a Description'
+        } else if(values.description.length<5) {
+            errors.description = 'Enter atleast 5 Characters in Description'
+        }
+
+        if(!moment(values.targetDate).isValid()) {
+            errors.targetDate = 'Enter a valid target date'
+        }
+        
         return errors
 
     }
