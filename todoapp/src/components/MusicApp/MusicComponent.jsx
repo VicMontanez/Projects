@@ -55,6 +55,7 @@ class MusicComponent extends Component {
                         (props) => (
                             <Form>
                                  <ErrorMessage name="description" component="div" className="alert alert-warning"/>
+                                 <ErrorMessage name="targetDate" component="div" className="alert alert-warning"/>
                                 <fieldset className="form-group">
                                     <label>Description</label>
                                     <Field className="form-control" type="text" name="description"/>
