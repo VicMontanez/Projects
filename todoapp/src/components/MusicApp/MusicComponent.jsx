@@ -1,6 +1,6 @@
 import React , {Component} from 'react'
 import moment from 'moment'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 class MusicComponent extends Component {
     constructor(props) {
@@ -17,7 +17,7 @@ class MusicComponent extends Component {
     }
 
     validate(values) {
-        let errors = {}
+        let errors = {description:'Should have at least 5 characters'}
         console.log(values)
         return errors
 
