@@ -1,6 +1,8 @@
 import React , {Component} from 'react'
 import moment from 'moment'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import MusicDataService from '../../api/music/MusicDataService.js'
+import AuthenticationService from './AuthenticationService.js'
 
 class MusicComponent extends Component {
     constructor(props) {
@@ -14,6 +16,15 @@ class MusicComponent extends Component {
 
         this.onSubmit = this.onSubmit.bind(this)
         this.validate = this.validate.bind(this)
+    }
+
+    componentDidMount() {
+        let username = AuthenticationService.getLoggedInUserName()
+        MusicDataService.retrieveMusic(username, this.state.id)
+        .then(response => this.setState({
+            description: response.data.description,
+            targetDate: response.data.targetDate
+        }))
     }
 
     validate(values) {
@@ -52,6 +63,7 @@ class MusicComponent extends Component {
                     validateOnChange={false} //by default formik has onChange
                     validateOnBlur={false}
                     validate={this.validate}
+                    enableReinitialize={true}
                 >
                     {
                         (props) => (
