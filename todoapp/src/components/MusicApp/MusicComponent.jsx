@@ -23,7 +23,7 @@ class MusicComponent extends Component {
         MusicDataService.retrieveMusic(username, this.state.id)
         .then(response => this.setState({
             description: response.data.description,
-            targetDate: response.data.targetDate
+            targetDate: moment(response.data.targetDate).format('YYYY-MM-DD')
         }))
     }
 
