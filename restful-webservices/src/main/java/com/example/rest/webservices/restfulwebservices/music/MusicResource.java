@@ -22,6 +22,11 @@ public class MusicResource {
 		return musicService.findAll();
 	}
 	
+	@GetMapping("users/{username}/music/{id}")
+	public Music getMusic(@PathVariable String username, @PathVariable long id){
+		return musicService.findById(id);
+	}
+	
 	@DeleteMapping("users/{username}/music/{id}")
 	public ResponseEntity<Void> deleteMusic(@PathVariable String username, @PathVariable long id){
 		
