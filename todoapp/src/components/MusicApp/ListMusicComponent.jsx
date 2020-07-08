@@ -89,6 +89,9 @@ render(){
                             }
                         </tbody>
                         </table>
+                        <div className="row">
+                            <button className="btn btn-success">Add</button>
+                        </div>
                         </div>
         </div>
     )
