@@ -49,6 +49,8 @@ class MusicComponent extends Component {
                         targetDate: targetDate,
                     }}
                     onSubmit={this.onSubmit}
+                    validateOnChange={false} //by default formik has onChange
+                    validateOnBlur={false}
                     validate={this.validate}
                 >
                     {
