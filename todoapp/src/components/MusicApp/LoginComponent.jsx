@@ -32,7 +32,7 @@ class LoginComponent extends Component {
 
     loginClicked() {
         if(this.state.username === "username" && this.state.password=== "password1234"){
-            AuthenticationService.registerSuccessfulLogin()
+            AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
             this.props.history.push(`/welcome/${this.state.username}`);
             //this.props.history.push("/search")
             //this.setState({showSuccessMessage:true})
@@ -50,7 +50,7 @@ class LoginComponent extends Component {
         return (
             <div>
                 <h1>Login</h1>
-                <div className="container">
+                <div>
                     {/* <ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/> */}
                     {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Credentials</div>}
                     {this.state.showSuccessMessage && <div>Login Successful!</div>}
