@@ -51,16 +51,9 @@
 }
 
 
-/* html, body {
-  background: repeating-linear-gradient(120deg,
-  #236533,
-  #236533 127px,
-  #1a5127 127px,
-  #1a5127 260px);
-  height: 100%;
-  padding: 0;
-  margin: 0;
-} */
+html, body {
+  background-color: #F5FFFA;
+}
 
 .musicNotes {
   width: 3em;
