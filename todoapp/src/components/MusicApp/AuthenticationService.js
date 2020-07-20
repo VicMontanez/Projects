@@ -26,6 +26,11 @@ class AuthenticationService {
         this.setupAxiosInterceptors(this.createBasicAuthToken(username, password))
     }
 
+    registerSuccessfulLoginForJwt(username, token) {
+        sessionStorage.setItem('authenticatedUser', username)
+        this.setupAxiosInterceptors(this.createJwtToken(token))
+    }
+
     logout() {
         sessionStorage.removeItem('authenticatedUser')
     }
