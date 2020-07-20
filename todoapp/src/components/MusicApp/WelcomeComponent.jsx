@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import HelloWorldService from '../../api/music/HelloWorldService'
+import MusicNotes from '../../images/music-notes.jpg'
+
 class WelcomeComponent extends Component {
  constructor(props){
      super(props)
@@ -24,6 +26,9 @@ class WelcomeComponent extends Component {
                 </div>
                 <div className= "container">
                     {this.state.welcomeMessage}
+                </div>
+                <div className="container">
+                    <img src={MusicNotes} alt="Music Notes" className='musicNotes' />
                 </div>
                 </>
                 )
