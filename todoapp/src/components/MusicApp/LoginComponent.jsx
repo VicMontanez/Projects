@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AuthenticationService from './AuthenticationService'
+import '../../App.css'
 
 
 class LoginComponent extends Component {
