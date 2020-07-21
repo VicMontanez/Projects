@@ -1,18 +1,19 @@
 import axios from 'axios'
+import {API_URL } from '../../Constants'
 
 class MusicDataService {
     retrieveAllMusic(name) {
-        return axios.get(`http://localhost:8080/users/${name}/music`);
+        return axios.get(`${API_URL}/users/${name}/music`);
          //console.log('executed service')
      }
 
      retrieveMusic(name, id) {
-        return axios.get(`http://localhost:8080/users/${name}/music/${id}`);
+        return axios.get(`${API_URL}/users/${name}/music/${id}`);
          //console.log('executed service')
      }
 
      deleteMusic(name, id) {
-        return axios.delete(`http://localhost:8080/users/${name}/music/${id}`);
+        return axios.delete(`${API_URL}/users/${name}/music/${id}`);
          //console.log('executed service')
      }
 }
