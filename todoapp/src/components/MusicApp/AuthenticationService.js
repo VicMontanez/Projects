@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-
+export const USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 class AuthenticationService {
 
     executeBasicAuthenticationService(username, password) {
