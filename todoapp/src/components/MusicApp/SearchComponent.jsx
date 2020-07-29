@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../../App.css'
 
 //Class Component
 class SearchComponent extends Component {
@@ -45,7 +46,6 @@ class SearchComponent extends Component {
     render () {
         
     return (
-      <div className="row">
       <div className="results">
         <h1>iTunes API App</h1>
         <p>Enter artist here: <input type="text" name="search" value={this.state.search} onChange={this.handleChange}/></p>
@@ -68,7 +68,6 @@ class SearchComponent extends Component {
         
            )
     }
-      </div>
       </div>
     );
   }
