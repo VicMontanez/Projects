@@ -1,7 +1,8 @@
 import axios from 'axios';
-import {API_URL} from '../../Constants'
+import { API_URL } from '../../Constants'
 
-export const USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
+export const USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser';
+
 class AuthenticationService {
 
     executeBasicAuthenticationService(username, password) {
@@ -36,17 +37,17 @@ class AuthenticationService {
 
 
     logout() {
-        sessionStorage.removeItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
+        sessionStorage.removeItem('USER_NAME_SESSION_ATTRIBUTE_NAME');
     }
 
     isUserLoggedIn() {
-        let user = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
+        let user = sessionStorage.getItem('USER_NAME_SESSION_ATTRIBUTE_NAME');
         if (user === null) return false
         return true
     }
 
     getLoggedInUserName() {
-        let user = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
+        let user = sessionStorage.getItem('USER_NAME_SESSION_ATTRIBUTE_NAME');
         if (user === null) return '';
         return user
     }
